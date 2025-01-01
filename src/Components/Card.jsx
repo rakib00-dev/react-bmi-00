@@ -7,7 +7,7 @@ const Card = () => {
         </h5>
         <div>
           <label
-            for="number"
+            htmlFor="number"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Your Height (feet & inch)
@@ -16,16 +16,16 @@ const Card = () => {
             <input
               type="number"
               name="number"
-              id="number"
-              className="bg-gray-50 border w-1/2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              id="inch"
+              className="bg-gray-50 border w-1/2 border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="5 feet"
               required
             />
             <input
               type="number"
               name="number"
-              id="number"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              id="inch"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="6 inch"
               required
             />
@@ -33,7 +33,7 @@ const Card = () => {
         </div>
         <div>
           <label
-            for="number"
+            htmlFor="kg"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Your Weight (kg)
@@ -41,8 +41,8 @@ const Card = () => {
           <input
             type="number"
             name="number"
-            id="number"
-            placeholder="44 kg"
+            id="kg"
+            placeholder="55 kg"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
             required
           />
