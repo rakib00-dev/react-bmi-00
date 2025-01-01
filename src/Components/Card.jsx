@@ -6,17 +6,14 @@ const Card = () => {
   const [kg, setKg] = useState();
 
   function feetFunc(e) {
-    console.log(e.target.value);
     setFeet(e.target.value);
   }
 
   function inchFunc(e) {
-    console.log(e.target.value);
     setInch(e.target.value);
   }
 
   function kgFunc(e) {
-    console.log(e.target.value);
     setKg(e.target.value);
   }
 
