@@ -31,7 +31,7 @@ const Card = () => {
   }
 
   return (
-    <div className="w-[20rem] h-fit p-4 py-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-[19rem] md:w-[20rem] h-fit p-4 py-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form
         onSubmit={(e) => {
           e.preventDefault();
