@@ -1,4 +1,5 @@
 import Card from './Components/Card';
+import Result from './Components/Result';
 
 function App() {
   return (
@@ -31,9 +32,7 @@ function App() {
       </ol>
 
       {/* result */}
-      <div>
-        <i>{}</i>
-      </div>
+      <Result />
     </div>
   );
 }
