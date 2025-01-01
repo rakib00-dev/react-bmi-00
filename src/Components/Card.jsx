@@ -1,37 +1,47 @@
 const Card = () => {
   return (
-    <div className="w-full max-w-sm p-4 py-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-[20rem] h-fit p-4 py-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form className="space-y-6" action="#">
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">
-          BMI - Body mass index
+          BMI - Body mass index (Metric)
         </h5>
         <div>
           <label
-            for="email"
+            for="number"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Your Heihgt
+            Your Height (feet & inch)
           </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-            placeholder="64 cm"
-            required
-          />
+          <span className="flex">
+            <input
+              type="number"
+              name="number"
+              id="number"
+              className="bg-gray-50 border w-1/2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="5 feet"
+              required
+            />
+            <input
+              type="number"
+              name="number"
+              id="number"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="6 inch"
+              required
+            />
+          </span>
         </div>
         <div>
           <label
-            for="password"
+            for="number"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Your Weight
+            Your Weight (kg)
           </label>
           <input
-            type="password"
-            name="password"
-            id="password"
+            type="number"
+            name="number"
+            id="number"
             placeholder="44 kg"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
             required
