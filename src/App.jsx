@@ -6,7 +6,7 @@ function App() {
       <Card />
 
       {/* BMI Charts */}
-      {/* <ul>
+      <ul>
         <li>
           <strong>Underweight</strong>: Less than 18.5
         </li>
@@ -28,7 +28,7 @@ function App() {
         <li>
           <strong>Class 3 obesity (severe obesity)</strong>: 40 or greater
         </li>
-      </ul> */}
+      </ul>
 
       {/* result */}
       <div>
