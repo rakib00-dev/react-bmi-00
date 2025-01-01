@@ -48,6 +48,8 @@ const Card = () => {
               type="number"
               name="number"
               id="inch"
+              min={1}
+              max={8}
               className="bg-gray-50 border w-1/2 border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="5 feet"
               required
@@ -58,6 +60,8 @@ const Card = () => {
               type="number"
               name="number"
               id="inch"
+              min={1}
+              max={12}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="6 inch"
               required
