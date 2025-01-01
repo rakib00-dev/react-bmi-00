@@ -18,7 +18,7 @@ const Card = () => {
   }
 
   const feetConvertToInches = feet * 12;
-  let totalInches = feetConvertToInches + inch;
+  let totalInches = Number(feetConvertToInches) + Number(inch);
   let inchToMeter = 0.0254; //meter
   inchToMeter = inchToMeter * totalInches;
 
@@ -26,8 +26,8 @@ const Card = () => {
     console.log('ok');
     console.log({ feet, inch, kg });
 
-    console.log(totalInches * inchToMeter);
-    console.log(inchToMeter);
+    // console.log(totalInches * inchToMeter);
+    console.log(inchToMeter ** 2);
   }
 
   return (
