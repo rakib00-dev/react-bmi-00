@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const Card = () => {
-  const [feet, setFeet] = useState();
-  const [inch, setInch] = useState();
-  const [kg, setKg] = useState();
+  const [feet, setFeet] = useState(0);
+  const [inch, setInch] = useState(0);
+  const [kg, setKg] = useState(0);
 
   function feetFunc(e) {
     setFeet(e.target.value);
@@ -17,9 +17,17 @@ const Card = () => {
     setKg(e.target.value);
   }
 
+  const feetConvertToInches = feet * 12;
+  let totalInches = feetConvertToInches + inch;
+  let inchToMeter = 0.0254; //meter
+  inchToMeter = inchToMeter * totalInches;
+
   function calc() {
     console.log('ok');
     console.log({ feet, inch, kg });
+
+    console.log(totalInches * inchToMeter);
+    console.log(inchToMeter);
   }
 
   return (
@@ -43,7 +51,7 @@ const Card = () => {
           </label>
           <span className="flex">
             <input
-              value={feet}
+              value={feet == 0 ? '' : feet}
               onChange={feetFunc}
               type="number"
               name="number"
@@ -56,7 +64,7 @@ const Card = () => {
             />
             <input
               onChange={inchFunc}
-              value={inch}
+              value={inch == 0 ? '' : inch}
               type="number"
               name="number"
               id="inch"
@@ -77,7 +85,7 @@ const Card = () => {
           </label>
           <input
             onChange={kgFunc}
-            value={kg}
+            value={kg == 0 ? '' : kg}
             type="number"
             name="number"
             id="kg"
