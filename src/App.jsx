@@ -1,5 +1,5 @@
 import Card from './Components/Card';
-import Result from './Components/Result';
+// import Result from './Components/Result';
 
 function App() {
   return (
@@ -30,9 +30,6 @@ function App() {
           <strong>Class 3 obesity (severe obesity)</strong>: 40 or greater
         </li>
       </ol>
-
-      {/* result */}
-      <Result />
     </div>
   );
 }

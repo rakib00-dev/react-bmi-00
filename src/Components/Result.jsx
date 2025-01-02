@@ -1,9 +1,9 @@
-const Result = () => {
+const Result = ({ result }) => {
   return (
     <div>
       <h1>
         <strong>
-          <i>{}</i>
+          <i>{result}</i>
         </strong>
       </h1>
     </div>
