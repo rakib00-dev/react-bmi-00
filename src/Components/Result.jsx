@@ -1,7 +1,9 @@
 const Result = ({ result }) => {
   return (
-    <div>
-      <h1>
+    <div className="w-full h-fit">
+      <h1 className="text-center text-md md:text-xl">
+        {' '}
+        Result :{' '}
         <strong>
           <i>{result}</i>
         </strong>

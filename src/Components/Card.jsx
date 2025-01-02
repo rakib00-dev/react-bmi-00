@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import Result from './Result';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Card = () => {
   const [feet, setFeet] = useState(0);
   const [inch, setInch] = useState(0);
   const [kg, setKg] = useState(0);
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(0);
+  const [going, setGoing] = useState(false);
 
   function feetFunc(e) {
     setFeet(e.target.value);
@@ -19,21 +21,33 @@ const Card = () => {
     setKg(e.target.value);
   }
 
-  const feetConvertToInches = feet * 12;
-  let totalInches = Number(feetConvertToInches) + Number(inch);
-  let inchToMeter = 0.0254; //meter
-  inchToMeter = inchToMeter * totalInches;
+  // const feetConvertToInches = feet * 12;
+  // let totalInches = Number(feetConvertToInches) + Number(inch);
+  // let inchToMeter = 0.0254; //meter
+  // inchToMeter = inchToMeter * totalInches;
 
   function calc() {
-    let meterSquare = inchToMeter ** 2;
-    let BMICalculation = kg / meterSquare;
-    console.log({ feet, inch, kg });
-    setResult(BMICalculation);
+    if (feet > 8 || inch > 12) {
+      setGoing(false);
+    }
+    if (going) {
+      const feetConvertToInches = feet * 12;
+      let totalInches = Number(feetConvertToInches) + Number(inch);
+      let inchToMeter = 0.0254; //meter
+      inchToMeter = inchToMeter * totalInches;
 
-    // console.log(totalInches * inchToMeter);
-    // console.log('ok');
-    // console.log(inchToMeter ** 2);
-    console.log(BMICalculation);
+      let meterSquare = inchToMeter ** 2;
+      let BMICalculation = kg / meterSquare;
+      console.log({ feet, inch, kg });
+      setResult(BMICalculation);
+
+      // console.log(totalInches * inchToMeter);
+      // console.log('ok');
+      // console.log(inchToMeter ** 2);
+      console.log(BMICalculation);
+    } else {
+      toast.error('Opps, You Need to Follow The Guid');
+    }
   }
 
   return (
@@ -109,17 +123,11 @@ const Card = () => {
           >
             Calculate
           </button>
+          <ToastContainer />
         </form>
       </div>
-      <div className="w-full h-fit">
-        <h1 className="text-center text-md md:text-xl">
-          {' '}
-          Result :{' '}
-          <strong>
-            <i>{result}</i>
-          </strong>
-        </h1>
-      </div>
+
+      <Result result={isNaN(result) && !going ? '' : result} />
     </>
   );
 };
