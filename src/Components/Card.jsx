@@ -112,7 +112,7 @@ const Card = () => {
         </form>
       </div>
       <div className="w-full h-fit">
-        <h1>
+        <h1 className="text-center">
           {' '}
           Result :{' '}
           <strong>
